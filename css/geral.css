@@ -219,43 +219,6 @@ p {
   color: gray
 }
 
-.loading span {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  border: 3px solid transparent;
-  border-left-color: #00f;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: block;
-  animation: loading 1s forwards infinite
-}
-
-.loading span:nth-child(2) {
-  border-left-color: rgba(0, 0, 255, .3);
-  animation-delay: .1s
-}
-
-.loading span:nth-child(3) {
-  border-left-color: rgba(0, 0, 255, .1);
-  animation-delay: .2s
-}
-
-@keyframes loading {
-  to {
-    transform: rotate(360deg)
-  }
-}
-
-.remove {
-  display: none
-}
-
-.loading.remove {
-  display: none
-}
-
 [data-anime] {
   opacity: 0;
   transition: .7s ease;
@@ -1516,18 +1479,21 @@ svg {
   }
 
   .menu-lateral::after {
-    content: '🡒';
+    content: '';
     z-index: 9999;
     color: white;
     display: block;
-    bottom: 5px;
+    bottom: 10px;
     position: absolute;
-    animation: arraste .5s alternate infinite;
+    animation: arraste .7s alternate infinite;
+    width: 30px;
+    height: 20px;
+    background: url(../svg/seta-menu.svg) no-repeat center center;
   }
 
   @keyframes arraste {
     from {
-      transform: translate3d(5px, 0, 0);
+      transform: translate3d(40px, 0, 0);
     }
 
     to {
@@ -1866,7 +1832,7 @@ svg {
 
   /* Detalhes */
   .visualizacao-dados li {
-    font-size: 1rem;
+    font-size: .875rem;
     gap: 20px;
   }
 
@@ -1879,7 +1845,8 @@ svg {
   .dash-header input {
     width: 70%;
     font-size: 1rem;
-    height: 60px;
+    padding: 16px;
+    height: auto;
   }
 
   .dash-header form .btn-principal {
@@ -1887,7 +1854,7 @@ svg {
   }
 
   .dash-header a {
-    margin-top: 20px;
+    padding: 15px 40px !important;
   }
 
   .table-container {
@@ -1901,7 +1868,7 @@ svg {
   th,
   td {
     padding: 10px;
-    font-size: .675rem;
+    font-size: .775rem;
   }
 
   .acoes {
@@ -1939,7 +1906,7 @@ svg {
   .btn-principal,
   a.btn-principal,
   button.btn-principal {
-    padding: 15px 20px;
+    padding: 18px;
     font-size: .875rem;
   }
 
@@ -1959,6 +1926,10 @@ svg {
     font-size: .875rem;
     ;
     line-height: 1.4rem;
+  }
+
+  .modal-container {
+    margin-top: 180px;
   }
 
   .modal-title .info-delete .icone {
@@ -1984,7 +1955,47 @@ svg {
   .breadcrumb-container {
     padding: 10px 0;
   }
+
   .breadcrumb-links li+li::before {
     margin: 0 10px;
   }
+
+  .gerar-pdf {
+    margin-top: 40px;
+  }
+
+  /* Novos Dashboard */
+  .bem-vindo {
+    font-size: 1.3rem;
+  }
+
+  .resumo-dashboard .resumo-container {
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .resumo-dashboard .resumo-container .resumo-item {
+    border-right: none;
+  }
+
+  /* Proximas audiencias */
+  .detalhes-dash {
+    grid-template-columns: 1fr;
+    overflow: initial;
+  }
+
+  .vencendo-prazo {
+    padding-right: 0;
+  }
+
+  .data-hoje {
+    font-size: 1.5rem;
+  }
+
+  .total-prazos {
+    margin-bottom: 60px;
+  }
+
+
 }

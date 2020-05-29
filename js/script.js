@@ -27,29 +27,17 @@ function addAnimate() {
         dataAnime.classList.add('animate');
 }
 
-function initLoading() {
-
-    function remove() {
-        setTimeout(function () {
-            const loading = document.querySelector('.loading');
-            if (loading)
-                loading.classList.add('remove');
-        }, 1000);
-
-    }
-
+function initPage() {
     window.onload = function () {
         try {
             CarregarUsuarioLogado();
-            remove();
             addAnimate();
         } catch {
-            remove();
             addAnimate();
         }
     };
 };
-initLoading();
+initPage();
 
 
 
@@ -603,7 +591,7 @@ function initDashboard() {
 
     // Caminho da API
     // fetchDashboard('https://appjuridico.club/Dashboard/Consulta');
-    // fetchDashboard('./prazos.json');
+    fetchDashboard('./prazos.json');
 
 }
 initDashboard();
