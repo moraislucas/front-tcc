@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/geral.css">
+
+  <title>Responsável do Assistido</title>
+</head>
+
+<body>
+
+
+
+  <!-- Inicio menu lateral -->
+
+  <div class="container-geral">
+    <div class="menu-lateral item">
+      <div class="icone">
+        <img src="svg/juridico.svg" alt="Icone juridico">
+      </div>
+      <div class="lista-menu">
+        <nav>
+          <ul>
+            <li>
+              <a href="dashboard.html" class="btn-principal">
+                <i data-feather="bar-chart-2"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="assistidos.html" class="btn-principal">
+                <i data-feather="user"></i>
+                Assistidos
+              </a>
+            </li>
+
+            <li>
+              <a href="processos.html" class="btn-principal">
+                <i data-feather="folder"></i>
+                Processos
+              </a>
+            </li>
+            <li>
+              <a href="cadastro-prazos.html" class="btn-principal">
+                <i data-feather="clock"></i>
+                Prazos
+              </a>
+            </li>
+            <li>
+              <a href="uploads.html" class="btn-principal">
+                <i data-feather="file"></i>
+                Arquivos
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="usuario">
+        <ul>
+          <li>
+            <a href="#" title="Clique para sair">
+              Lucas
+              <i data-feather="log-out"></i>
+
+            </a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Fim menu lateral -->
+
+
+    <div class="dashboard item">
+      <div class="dash-container" data-anime="right">
+        <div class="cadastro">
+          <h1>Responsável do Assistido</h1>
+
+        </div>
+
+        <div class="loading">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="cadastro-usuario">
+          <form action="" enctype="multipart/form-data">
+
+            <div class="item-cadastro">
+              <h2>Identificação do Assistido</h2>
+
+              <label for="Assistido_idAssistido">Digite o CPF do Assistido</label>
+              <input autocomplete="off" type="text" name="Assistido_idAssistido" required max="11">
+            </div>
+
+        </div>
+
+
+        <div class="item-cadastro">
+
+          <h2>Pessoal</h2>
+
+          <div class="cadastro-flex" id="nome-upload">
+            <div class="item-flex-cadastro">
+              <label for="nomeRespAssistido">Nome completo</label>
+              <input autocomplete="off" type="text" name="nomeRespAssistido" placeholder="Responsável Jose da Silva"
+                required class="total">
+            </div>
+          </div>
+
+
+          <div class="cadastro-flex">
+            <div class="item-flex-cadastro">
+              <label for="dataNascimentoRespAssistido">Data Nascimento</label>
+              <input autocomplete="off" type="date" name="dataNascimentoRespAssistido" placeholder="DD/MM/AAAA" required
+                class="metade">
+
+            </div>
+
+            <div class="item-flex-cadastro">
+              <label for="CPFRespAssistido">CPF</label>
+              <input autocomplete="off" type="text" name="CPFRespAssistido" placeholder="xxx.xxx.xxx-xx" maxlength="11"
+                required class="metade">
+
+            </div>
+
+            <div class="item-flex-cadastro">
+              <label for="RGRespAssistido">RG</label>
+              <input autocomplete="off" type="text" name="RGRespAssistido" placeholder="xx.xxx.xxx-x" maxlength="9"
+                required class="metade">
+
+            </div>
+          </div>
+
+          <label for="emailRespAssistido">E-mail</label>
+          <input autocomplete="off" type="e-mail" name="emailRespAssistido" placeholder="assistido@email.com" required
+            class="total">
+
+          <label for="profissaoRespAssistido">Profissão</label>
+          <input autocomplete="off" type="text" name="profissaoRespAssistido" placeholder="Arquiteto" required>
+
+          <div class="cadastro-flex select-flex">
+            <div class="item-flex-cadastro">
+              <label for="estadoCivilRespAssistido">Estado Civil</label>
+              <select name="estadoCivilRespAssistido" id="estadoCivilRespAssistido" class="metade select-item">
+                <option value="selecione">Selecione</option>
+                <option value="solteiro">Solteiro</option>
+                <option value="casado">Casado</option>
+                <option value="divorciado">Divorciado</option>
+                <option value="viuvo">Viúvo</option>
+                <option value="separado">Separado</option>
+              </select>
+            </div>
+
+            <div class="item-flex-cadastro">
+              <label for="sexoRespAssistido">Sexo</label>
+              <select name="sexoRespAssistido" id="sexoRespAssistido" class="metade select-item">
+                <option value="selecione">Selecione</option>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+                <option value="N">Não informar</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="cadastro-flex select-flex">
+            <div class="item-flex-cadastro">
+              <label for="numTelefoneRespAssisitido1">Telefone 1</label>
+              <input autocomplete="off" type="text" name="numTelefoneRespAssisitido1" placeholder="(xx) xxxx-xxx"
+                maxlength="11" required class="metade telefone-assistido">
+            </div>
+            <div class="item-flex-cadastro">
+              <label for="numTelefoneRespAssisitido2">Telefone 2</label>
+              <input type="text" name="numTelefoneRespAssisitido2" placeholder="(xx) xxxx-xxx" maxlength="11" required
+                class="metade telefone-assistido" autocomplete="off">
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="btn-cadastro">
+          <button class="btn-principal">Cadastrar</button>
+        </div>
+
+      </div>
+
+
+      </form>
+    </div>
+  </div>
+
+
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
+  </script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

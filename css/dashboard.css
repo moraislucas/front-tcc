@@ -1,0 +1,339 @@
+.container-geral {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.item {
+    width: 100%;
+    height: 100vh;
+}
+
+.menu-lateral {
+    background: var(--azul-principal);
+    margin: 0 auto;
+    width: 280px;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.menu-lateral img {
+    width: 60px;
+    margin: 40px auto;
+}
+
+.menu-lateral .lista-menu {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lista-menu ul {
+    /* background: silver; */
+    width: 220px;
+}
+
+.lista-menu a:hover {
+    background: var(--azul-secundario);
+}
+
+
+.lista-menu li a {
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.lista-menu svg {
+    margin-right: 45px;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+.usuario {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.usuario ul {
+    width: 220px;
+}
+
+.usuario li a {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: normal;
+    padding: 10px 20px;
+    color: var(--cor-branca);
+    font-weight: bold;
+}
+
+.usuario li a:hover {
+    color: var(--azul-secundario);
+}
+
+/* dash */
+.dashboard {
+    width: 960px;
+    margin-left: 350px;
+}
+
+.dash-container {
+    width: 100%;
+    margin: 60px auto;
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dash-header input {
+    width: 420px;
+    height: 40px;
+    padding: 10px 30px;
+    border-radius: 3px;
+    border: 1px solid var(--hover-link);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.dash-header input::placeholder {
+    color: var(--hover-link);
+    font-size: 1rem;
+}
+
+.dash-header input:focus {
+    border: 1px solid var(--azul-principal);
+    outline: none;
+    background: var(--azul-focus);
+}
+
+.dash-header a {
+    padding: 20px 50px;
+}
+
+/* Novos Dashboard */
+.bem-vindo {
+    font-weight: 500;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+}
+
+.resumo-dashboard {
+    margin: 40px auto;
+}
+
+.resumo-dashboard .resumo-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.resumo-container .resumo-item,
+.total-prazos .resumo-item {
+    /* background: silver; */
+    display: grid;
+    grid-template-columns: 1fr 3fr 40px;
+    gap: 25px;
+    /* align-items: center; */
+    position: relative;
+    transition: .3s ease;
+}
+
+.resumo-container .resumo-item:hover,
+.total-prazos .resumo-item:hover {
+    transform: translate3d(0, -5px, 0);
+
+}
+
+.resumo-item .icone-dash,
+.vencendo-prazo .alerta-dash .alerta-hora {
+    /* background: tomato; */
+    width: 60px;
+    height: 60px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.resumo-dashboard .resumo-container .resumo-item {
+    border-right: 1px solid #ddd;
+}
+
+.resumo-dashboard .resumo-container .resumo-item:nth-child(3) {
+    border: none;
+}
+
+.resumo-dashboard .resumo-container .resumo-item:nth-child(1) .icone-dash,
+.vencendo-prazo .alerta-dash .alerta-hora.vence-hoje {
+    background: rgba(255, 12, 52, 0.1);
+    color: #FF0C35;
+}
+
+.resumo-dashboard .resumo-container .resumo-item:nth-child(2) .icone-dash,
+.vencendo-prazo .alerta-dash .alerta-hora.proximos-dias {
+    background: rgba(99, 33, 206, 0.1);
+    color: #6321CE;
+}
+
+.resumo-dashboard .resumo-container .resumo-item:nth-child(3) .icone-dash,
+.vencendo-prazo .alerta-dash .alerta-hora.proximas-semanas {
+    background: rgba(40, 213, 167, 0.1);
+    color: #28D5A7;
+}
+
+.resumo-item .icone-dash svg {
+    width: 35px;
+    height: 35px;
+}
+
+.resumo-item .resumo-info h4 {
+    font-size: 2.15rem;
+    font-weight: 600;
+}
+
+.resumo-item .resumo-info span {
+    color: #bbbbbb;
+}
+
+.resumo-item .resumo-info small {
+    color: #bbbbbb;
+}
+
+/* Proximas audiencias */
+.detalhes-dash {
+    display: grid;
+    grid-template-columns: 1fr 220px 1fr;
+    align-items: center;
+    gap: 40px;
+    max-height: 60vh;
+    /* background: rgb(236, 236, 236); */
+    overflow: hidden;
+}
+
+.vencendo-prazo {
+    height: 350px;
+    overflow-y: scroll;
+    padding-right: 10px;
+}
+
+.vencendo-prazo::-webkit-scrollbar {
+    width: 18px;
+}
+
+.vencendo-prazo::-webkit-scrollbar-thumb {
+    background: rgb(212, 212, 212);
+    border-left: 8px solid #FFF;
+    border-right: 8px solid #FFF;
+}
+
+.vencendo-prazo::-webkit-scrollbar-track {
+    background: #FFF;
+}
+
+.vencendo-prazo h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vencendo-prazo h3 svg {
+    animation: scroll .5s alternate infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 3px, 0);
+    }
+}
+
+.vencendo-prazo .alerta-dash {
+    /* background: rgb(112, 112, 112); */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 20px 0;
+    transition: .5s ease;
+}
+
+.vencendo-prazo .alerta-dash:hover {
+    transform: translate3d(-2px, 0, 0);
+}
+
+.vencendo-prazo .alerta-dash+.alerta-dash {
+    border-top: 1px solid #F2F2F2;
+}
+
+.vencendo-prazo .alerta-dash .alerta-hora {
+    font-weight: 600;
+}
+
+.vencendo-prazo .alerta-dash .alerta-infos p {
+    font-weight: 600;
+    font-size: .975rem;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.vencendo-prazo .alerta-dash .alerta-infos span {
+    font-weight: 600;
+    font-size: .875rem;
+    color: #bbb;
+}
+
+.vencendo-prazo .alerta-dash .alerta-infos .data-alerta {
+    font-size: .875rem;
+    font-weight: normal;
+}
+
+.total-prazos .resumo-item .icone-dash {
+    background: var(--azul-focus);
+    color: var(--azul-principal);
+}
+
+.total-prazos .resumo-item .mais-prazos svg {
+    color: #bbb
+}
+
+.total-prazos .resumo-item .mais-prazos svg:hover {
+    color: var(--azul-principal);
+}
+
+
+.data-hoje {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.data-hoje:hover {
+    letter-spacing: 1px;
+}

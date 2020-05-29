@@ -1,0 +1,99 @@
+
+
+.dash-container {
+    overflow: hidden;
+}
+
+.cadastro h1 {
+    color: var(--azul-principal);
+}
+
+.cadastro h1::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: var(--azul-principal);
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+
+
+.item-cadastro h2 {
+    margin-top: 20px;
+}
+
+.item-cadastro h2::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: var(--hover-link);
+    display: block;
+    margin: 20px auto;
+}
+
+.item-cadastro label {
+    display: block;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+
+.item-cadastro input,
+.item-cadastro textarea {
+    width: 30%;
+    padding: 15px;
+    margin: 10px auto 20px auto;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 1px solid var(--hover-link);
+    border-radius: 3px;
+}
+
+.item-cadastro input.total {
+    width: 60%;
+}
+
+.item-cadastro input.metade {
+    width: 80%;
+    margin-right: 60px;
+}
+
+
+
+.item-cadastro input:focus,
+.item-cadastro textarea:focus {
+    border: 1px solid var(--azul-principal);
+    outline: none;
+    background: var(--azul-focus);
+}
+
+.item-cadastro input::placeholder {
+    font-weight: normal;
+}
+
+.cadastro-flex {
+    display: flex;
+}
+
+.btn-cadastro {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.btn-cadastro button {
+    width: 150px;
+}
+
+.select-item {
+    margin-right: 20px;
+}
+
+.historicoProcesso {
+    width: 520px !important;
+    height: 20vh;
+    line-height: 1.7rem;
+    font-weight: normal !important;
+}

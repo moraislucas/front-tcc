@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/geral.css">
+
+    <title>Detalhes do Processo</title>
+</head>
+
+<body>
+
+    <div class="container-geral">
+
+        <!-- Inicio  menu lateral -->
+        <div class="menu-lateral item">
+            <div class="icone">
+                <img src="svg/juridico.svg" alt="Icone juridico">
+            </div>
+            <div class="lista-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="dashboard.html" class="btn-principal">
+                                <i data-feather="bar-chart-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assistidos.html" class="btn-principal">
+                                <i data-feather="user"></i>
+                                Assistidos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="processos.html" class="btn-principal">
+                                <i data-feather="folder"></i>
+                                Processos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cadastro-prazos.html" class="btn-principal">
+                                <i data-feather="clock"></i>
+                                Prazos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="uploads.html" class="btn-principal">
+                                <i data-feather="file"></i>
+                                Arquivos
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="usuario">
+                <ul>
+                    <li>
+                        <a href="#" title="Clique para sair">
+                            Lucas
+                            <i data-feather="log-out"></i>
+
+                        </a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Fim menu lateral -->
+
+
+        <div class="dashboard item">
+            <div class="dash-container">
+                <div class="cadastro">
+                    <!-- Titulo da Pagina -->
+                    <h1>Detalhes do Processo</h1>
+                </div>
+
+                <div class="loading">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="cadastro-usuario" data-anime="right">
+
+                    <!-- Links pagina atual e anteriores -->
+                    <div class="breadcrumb-container">
+                        <nav class="breadcrumb-nav">
+                            <ul class="breadcrumb-links">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Processos</a></li>
+                                <li class="breadcrumb-item ativo">Detalhes do Processo</li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="gerar-pdf">
+                        <a href="#" class="btn-principal">Gerar PDF</a>
+                    </div>
+
+
+                    <ul class="visualizacao-dados item-cadastro">
+
+
+                        <div>
+                            <h2>Dados do Processo</h2>
+                            <li>
+                                <span>CPF do Assistido: </span>
+                                <span>123.466.789-01</span>
+                            </li>
+                            <li>
+                                <span>Número do Processo: </span>
+                                <span>12345670019988261234</span>
+                            </li>
+                            <li>
+                                <span>Tipo de Processo: </span>
+                                <span>Divorcio Litigioso</span>
+                            </li>
+                            <li>
+                                <span>Status: </span>
+                                <span>Em Andamento</span>
+                            </li>
+                            <li>
+                                <span>Vara Responsável: </span>
+                                <span>1º Vara Criminal</span>
+                            </li>
+                            <li>
+                                <span>Forúm Responsável: </span>
+                                <span>Foro Regional da Lapa</span>
+                            </li>
+                        </div>
+
+                        <div>
+                            <h2>Histórico</h2>
+                            <li>
+                                <span class="historico-processo">Todas estas questões, devidamente ponderadas, levantam
+                                    dúvidas sobre se a
+                                    hegemonia do ambiente político deve passar por modificações independentemente de
+                                    todos os recursos funcionais envolvidos.
+                                </span>
+                            </li>
+                            <!-- Exemplo 2 -->
+                            <li>
+                                <span class="historico-processo">Evidentemente, a revolução dos costumes ainda não
+                                    demonstrou convincentemente que
+                                    vai participar na mudança do fluxo de informações.
+                                </span>
+                            </li>
+                        </div>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace();
+    </script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

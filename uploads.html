@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/geral.css">
+
+  <title>Uploads de Arquivos</title>
+</head>
+
+<body>
+  <div class="container-geral">
+
+    <!-- Inicio  menu lateral -->
+    <div class="menu-lateral item">
+      <div class="icone">
+        <img src="svg/juridico.svg" alt="Icone juridico">
+      </div>
+      <div class="lista-menu">
+        <nav>
+          <ul>
+            <li>
+              <a href="dashboard.html" class="btn-principal">
+                <i data-feather="bar-chart-2"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="assistidos.html" class="btn-principal">
+                <i data-feather="user"></i>
+                Assistidos
+              </a>
+            </li>
+
+            <li>
+              <a href="processos.html" class="btn-principal">
+                <i data-feather="folder"></i>
+                Processos
+              </a>
+            </li>
+            <li>
+              <a href="cadastro-prazos.html" class="btn-principal">
+                <i data-feather="clock"></i>
+                Prazos
+              </a>
+            </li>
+            <li>
+              <a href="uploads.html" class="btn-principal">
+                <i data-feather="file"></i>
+                Arquivos
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="usuario">
+        <ul>
+          <li>
+            <a href="#" title="Clique para sair">
+              Lucas
+              <i data-feather="log-out"></i>
+
+            </a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- Fim menu lateral -->
+
+
+    <div class="dashboard item">
+      <div class="dash-container">
+        <div class="cadastro upload-flex">
+          <h1>Arquivos do Assistido</h1>
+          <a href="downloads.html" class="btn-principal">Downloads <i data-feather="arrow-down"></i></a>
+        </div>
+
+        <div class="loading">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="cadastro-usuario" data-anime="right">
+          <form action="" enctype="multipart/form-data">
+
+            <div class="item-cadastro">
+              <h2>Upload de Arquivos</h2>
+
+              <label for="CPFAssistido">CPF do Assistido</label>
+              <input autocomplete="off" type="text" name="CPFAssistido" placeholder="xxx.xxx.xxx-xx" maxlength="14"
+                required data-cpf>
+
+              <div class="item-upload">
+                <div class="campo-upload">
+                  <input type="file" id="file" multiple="multiple">
+                  <img src="svg/upload.svg" alt="ícone upload">
+                  <p>Arraste os arquivos aqui <br>ou <br>Clique e selecione</p>
+                </div>
+
+                <div class="lista-upload">
+                  <h3 class="titulo-h3">Nomes Arquivos <span class="quantidade-arquivos">30 arquivos</span> </h3>
+
+                  <ul data-upload="lista">
+                    <!-- Dado inicial, porém ao adicionar item ele será removido -->
+                    <li>Nenhum arquivo anexado</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="btn-cadastro">
+              <button class="btn-principal" id="enviar">Cadastrar</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
+  </script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

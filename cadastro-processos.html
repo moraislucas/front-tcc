@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/geral.css">
+
+  <title>Cadastro de Processos</title>
+</head>
+
+<body>
+
+  <!-- Inicio menu lateral -->
+
+  <div class="container-geral">
+    <div class="menu-lateral item">
+      <div class="icone">
+        <img src="svg/juridico.svg" alt="Icone juridico">
+      </div>
+      <div class="lista-menu">
+        <nav>
+          <ul>
+            <li>
+              <a href="dashboard.html" class="btn-principal">
+                <i data-feather="bar-chart-2"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="assistidos.html" class="btn-principal">
+                <i data-feather="user"></i>
+                Assistidos
+              </a>
+            </li>
+
+            <li>
+              <a href="processos.html" class="btn-principal">
+                <i data-feather="folder"></i>
+                Processos
+              </a>
+            </li>
+            <li>
+              <a href="cadastro-prazos.html" class="btn-principal">
+                <i data-feather="clock"></i>
+                Prazos
+              </a>
+            </li>
+            <li>
+              <a href="uploads.html" class="btn-principal">
+                <i data-feather="file"></i>
+                Arquivos
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="usuario">
+        <ul>
+          <li>
+            <a href="#" title="Clique para sair">
+              Lucas
+              <i data-feather="log-out"></i>
+
+            </a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Fim menu lateral -->
+
+
+    <div class="dashboard item">
+      <div class="dash-container">
+        <div class="cadastro">
+          <h1>Cadastro de Processo</h1>
+        </div>
+
+        <div class="loading">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="cadastro-usuario" data-anime="right">
+          <form asp-controller="Assistido" asp-action="CadastroAssistido" enctype="multipart/form-data">
+
+            <section class="item-cadastro">
+
+              <h2>Dados do Processo</h2>
+
+              <div class="item-flex-cadastro">
+                <label for="idUsuario">CPF do Assistido</label>
+                <input autocomplete="off" type="text" placeholder="xxx.xxx.xxx-xx" maxlength="11" required data-cpf>
+              </div>
+
+              <div class="cadastro-flex select-flex">
+                <div class="item-flex-cadastro">
+                  <label for="numeroProcesso">Número do processo</label>
+                  <input autocomplete="off" type="text" required class="nProcesso metade" maxlength="25">
+                </div>
+
+                <div class="item-flex-cadastro">
+                  <label for="tipoProcesso">Tipo do processo</label>
+                  <input autocomplete="off" placeholder="Divórcio Litigioso" type="text" required class="metade"
+                    maxlength="25">
+                </div>
+              </div>
+
+              <div class="item-flex-cadastro">
+                <label for="senhaPrceosso">Senha do Processo
+                  <span class="opcional"> - opcional</span>
+                </label>
+                <input autocomplete="off" type="text" class="nProcesso metade" maxlength="60">
+              </div>
+
+              <div class="cadastro-flex select-flex">
+                <div class="item-flex-cadastro">
+                  <label for="statusProcesso">Status do processo</label>
+                  <input autocomplete="off" placeholder="Em Andamento" type="text" required class="metade"
+                    maxlength="20">
+                </div>
+
+                <div class="item-flex-cadastro">
+                  <label for="varaProcesso">Vara responsável</label>
+                  <input autocomplete="off" type="text" required class="metade" maxlength="20">
+                </div>
+              </div>
+
+              <div class="item-flex-cadastro">
+                <label for="nomeAdvogado">Nome do Advogado</label>
+                <input autocomplete="off" placeholder="Advogado do dia" type="text" required class="nProcesso metade"
+                  maxlength="60">
+              </div>
+              <div class="item-flex-cadastro">
+                <label for="forumProcesso">Fórum responsável</label>
+                <input autocomplete="off" placeholder="Foro Regional da Lapa" type="text" required
+                  class="nProcesso metade" maxlength="40">
+              </div>
+
+
+              <div class="item-flex-cadastro">
+                <label for="historicoProcesso">Histórico do processo
+                  <span class="opcional"> - opcional</span>
+                </label>
+                <textarea class="historicoProcesso" placeholder="Resumo do atendimento"></textarea>
+              </div>
+
+              <div class="btn-cadastro">
+                <button class="btn-principal">Cadastrar </button>
+              </div>
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/app.js"> </script>
+</body>
+
+</html>

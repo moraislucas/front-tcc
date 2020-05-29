@@ -1,0 +1,224 @@
+
+/* Inicio estilos */
+.body-login {
+    overflow: hidden;
+    background: url(../img/bg.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.login-container {
+    height: 120vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+.login-container .left h1 {
+    color: var(--cor-branca);
+    font-size: 2.5rem;
+}
+
+
+.login-container .primeiro-acesso {
+    position: absolute;
+    top: 120px;
+    color: var(--cor-branca);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.login-container .primeiro-acesso:hover {
+    color: var(--hover-link);
+}
+
+.mensagem-cadastro {
+    background: var(--card-aviso);
+    padding: 20px;
+    width: 300px;
+    border-radius: 3px;
+    position: absolute;
+    top: 160px;
+    display: none;
+    animation: slowDown .5s;
+}
+
+.mensagem-cadastro p {
+    font-size: .875rem;
+    color: var(--cor-branca);
+    line-height: 1.4rem;
+}
+
+.mensagem-cadastro.ativo {
+    display: block;
+}
+
+@keyframes slowDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -10px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.login-container .esqueceu-senha {
+    text-align: right;
+    width: 100%;
+    color: var(--azul-principal);
+    font-weight: bold;
+    margin: 5px 25px;
+}
+
+.login-container .esqueceu-senha:hover {
+    color: var(--card-aviso);
+}
+
+.login-container .right {
+    margin-left: 100px;
+}
+
+.login-container .right h1 {
+    font-size: 2.5rem;
+    color: var(--azul-principal);
+    text-align: center;
+    width: 100%;
+}
+
+
+
+.login-container .right form {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+}
+
+.login-container .right form label {
+    margin-top: 20px;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+.login-container .right form input {
+    width: 99%;
+    padding: 15px;
+    margin: 10px auto;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: transparent;
+    border: 1px solid var(--hover-link);
+    border-radius: 3px;
+
+}
+
+.login-container .right form input:focus {
+    border: 1px solid var(--azul-principal);
+    outline: none;
+    background: var(--azul-focus);
+}
+
+.login-container .right form button {
+    width: 40%;
+}
+
+/* Responsivo */
+
+/*Estilo para tablets*/
+/* Tablet */
+
+@media only screen and (max-width: 1200px) {
+
+    .container {
+        width: 90%;
+    }
+
+}
+
+/* Celular */
+@media only screen and (max-width: 980px) {
+    body {
+        background: var(--cor-branca);
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .banner {
+        height: 100vh;
+        background: var(--cor-branca);
+    }
+
+    .login-container {
+        padding: 10px;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .login-container .primeiro-acesso {
+        top: 30px;
+        right: 10px;
+        font-size: 1rem;
+        color: var(--azul-principal);
+    }
+
+
+    .mensagem-cadastro {
+        width: auto;
+        top: 55px;
+        left: 0;
+    }
+
+    .login-container .esqueceu-senha {
+        text-align: left;
+        margin: 10px 0;
+        font-size: 1rem;
+        color: var(--azul-principal);
+    }
+
+    .login-container .left h1 {
+        color: var(--azul-principal);
+        font-size: 1.5rem;
+        margin-bottom: 5px
+    }
+
+    .login-container .right {
+        margin-left: 0;
+        width: 100%;
+        position: relative;
+    }
+
+    .login-container .right h1 {
+        font-size: 1.2rem;
+        text-align: left;
+        margin: 20px 0;
+        color: var(--card-aviso);
+    }
+
+    .login-container .right form label {
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+
+    .login-container .right form input {
+        width: 89%;
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    .login-container .right form button {
+        margin-top: 20px;
+    }
+}

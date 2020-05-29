@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/geral.css">
+
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <div class="container-geral">
+    <div class="menu-lateral item">
+      <div class="icone">
+        <img src="svg/juridico.svg" alt="Icone juridico">
+      </div>
+      <div class="lista-menu">
+        <nav>
+          <ul>
+            <li>
+              <a href="dashboard.html" class="btn-principal">
+                <i data-feather="bar-chart-2"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="assistidos.html" class="btn-principal">
+                <i data-feather="user"></i>
+                Assistidos
+              </a>
+            </li>
+
+            <li>
+              <a href="processos.html" class="btn-principal">
+                <i data-feather="folder"></i>
+                Processos
+              </a>
+            </li>
+            <li>
+              <a href="cadastro-prazos.html" class="btn-principal">
+                <i data-feather="clock"></i>
+                Prazos
+              </a>
+            </li>
+            <li>
+              <a href="uploads.html" class="btn-principal">
+                <i data-feather="file"></i>
+                Arquivos
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="usuario">
+        <ul>
+          <li>
+            <a href="#" title="Clique para sair" id="NomeUsuarioLogado">
+              Lucas
+              <i data-feather="log-out"></i>
+
+            </a></li>
+        </ul>
+
+      </div>
+
+    </div>
+    <div class="dashboard item">
+      <div class="dash-container">
+        <div class="dash-header">
+          <h2 class="bem-vindo">Bem vindo :)</h2>
+          <a href="/Home/index" class="btn-principal">Novo</a>
+        </div>
+
+        <!-- Resumo Dashboard-->
+        <section class="resumo-dashboard">
+          <h3>Resumo das Audiências</h3>
+          <div class="resumo-container">
+            <!-- Vencem Hoje -->
+            <div class="resumo-item">
+              <div class="icone-dash"><i data-feather="x"></i></div>
+              <div class="resumo-info" data-dash="vence-hoje">
+                <h4>00</h4>
+                <span>Vencem hoje</span>
+              </div>
+            </div>
+            <!-- Proximos dias -->
+            <div class="resumo-item">
+              <div class="icone-dash"><i data-feather="minus"></i></div>
+              <div class="resumo-info" data-dash="proximos-dias">
+                <h4>00</h4>
+                <span>Próximos dias</span>
+              </div>
+            </div>
+            <!-- Proximas semanas -->
+            <div class="resumo-item">
+              <div class="icone-dash"><i data-feather="check"></i></div>
+              <div class="resumo-info" data-dash="proximas-semanas">
+                <h4>00</h4>
+                <span>Próximas semanas</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Detalhes -->
+        <section class="detalhes-dash">
+          <!-- vencendo -->
+          <ul class="vencendo-prazo">
+            <h3>Próximas datas <i data-feather="arrow-down"></i></h3>
+            <!-- Alertas serão renderizado via JS -->
+          </ul>
+
+          <!-- Data Hoje -->
+          <div class="data-hoje">
+            <span>-</span>
+          </div>
+
+          <!-- total Prazos -->
+          <div class="total-prazos">
+            <div class="resumo-item">
+              <div class="icone-dash"><i data-feather="clock"></i></div>
+              <div class="resumo-info" data-dash="todos-prazos">
+                <h4>00</h4>
+                <span>Prazos cadastrados</span>
+                <small>*vencidos e no prazo</small>
+              </div>
+              <a href="/Audiencia/ConsultaAudiencia" class="mais-prazos"><i data-feather="arrow-up-right"></i></a>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+    <!--  -->
+  </div>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
+  </script>
+  <script src="js/script-completo.js"></script>
+</body>
+
+</html>

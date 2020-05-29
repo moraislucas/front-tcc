@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/geral.css">
+
+    <title>NPJ - Acesse sua conta</title>
+</head>
+
+
+<!-- Inicio -->
+
+<body>
+    <section class="body-login">
+        <div class="container login-container">
+            <div class="left">
+                <a href="#" class="primeiro-acesso">Primeiro acesso ?</a>
+                <div class="mensagem-cadastro">
+                    <p>Entre em contato com a Coordenação do NPJ para liberação do acesso.</p>
+
+                </div>
+                <h1>Olá, amigo!</h1>
+            </div>
+            <div class="right">
+                <h1>Acesse a sua conta</h1>
+                <form asp-controller="Usuario" asp-action="validarLogin">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" asp-for="Nome" required>
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" asp-for="Senha" required>
+
+                    <a href="esqueceu-senha.html" class="esqueceu-senha">Esqueceu a senha ?</a>
+
+                    <button type="submit" class="btn-principal">Acessar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+</body> <!-- Fim -->
+
+</html>

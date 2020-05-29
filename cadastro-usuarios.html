@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/geral.css">
+
+  <title>Cadastro de Usuários</title>
+</head>
+
+<body>
+  <div class="container-geral">
+
+    <!-- Inicio  menu lateral -->
+    <div class="menu-lateral item">
+      <div class="icone">
+        <img src="svg/juridico.svg" alt="Icone juridico">
+      </div>
+      <div class="lista-menu">
+        <nav>
+          <ul>
+            <li>
+              <a href="dashboard.html" class="btn-principal">
+                <i data-feather="bar-chart-2"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="assistidos.html" class="btn-principal">
+                <i data-feather="user"></i>
+                Assistidos
+              </a>
+            </li>
+
+            <li>
+              <a href="processos.html" class="btn-principal">
+                <i data-feather="folder"></i>
+                Processos
+              </a>
+            </li>
+            <li>
+              <a href="cadastro-prazos.html" class="btn-principal">
+                <i data-feather="clock"></i>
+                Prazos
+              </a>
+            </li>
+            <li>
+              <a href="uploads.html" class="btn-principal">
+                <i data-feather="file"></i>
+                Arquivos
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="usuario">
+        <ul>
+          <li>
+            <a href="#" title="Clique para sair">
+              Lucas
+              <i data-feather="log-out"></i>
+
+            </a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- Fim menu lateral -->
+
+
+    <div class="dashboard item">
+      <div class="dash-container">
+        <div class="cadastro">
+          <h1>Cadastro de Usuários</h1>
+        </div>
+
+        <div class="loading">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="cadastro-usuario" data-anime="right">
+          <form action="">
+
+            <div class="item-cadastro">
+              <h2>Pessoal</h2>
+              <label for="nomeUsuario">Nome completo</label>
+              <input type="text" placeholder="Fulano da Silva Santos" required class="total">
+
+              <div class="cadastro-flex">
+                <div class="item-flex-cadastro">
+                  <label for="documentoUsuario">Documento</label>
+                  <input type="text" placeholder="RGM ou OAB" required class="metade">
+                  <label for="dataNascimentoUsuario">Data de nascimento</label>
+                  <input type="date" placeholder="DD/MM/AAAA" required class="metade validaData">
+                </div>
+
+                <div class="item-flex-cadastro">
+                  <label for="cpfUsuario">CPF</label>
+                  <input type="text" name="cpf" placeholder="xxx.xxx.xxx-xx" required class="metade" data-cpf>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="item-cadastro">
+              <h2>Conta</h2>
+              <label for="emailUsuario">E-mail</label>
+              <input type="email" placeholder="fulano@contato.com.br" required class="total">
+
+              <div class="cadastro-flex">
+                <div class="item-flex-cadastro">
+                  <label for="senhaUsuario">Senha</label>
+                  <input type="password" id="senha" required class="metade">
+                  <div class="mostraForca"></div>
+                </div>
+
+                <div class="item-flex-cadastro ">
+                  <label for="confirma-senha">Confirme a senha</label>
+                  <input type="password" id="senha2" required class="metade">
+                </div>
+
+              </div>
+
+
+              <div class="item-cadastro">
+                <ul class="regra-senha">
+                  <li>
+                    <span>Mínimo 6 caracteres </span>
+                    <span>1 Letra maiúscula</span>
+                  </li>
+                  <li>
+                    <span>1 Letra minúscula</span>
+                    <span>1 Número</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="cadastro-flex">
+                <div class="item-flex-cadastro">
+                  <label for="tipoUsuario">Tipo de usuário</label>
+                  <select name="tipoUsuario" id="tipoUsuario" class="metade select-item">
+                    <option value="selecione">Selecione</option>
+                    <option value="professor">Professor</option>
+                    <option value="advogado">Advogado</option>
+                    <option value="estagiario">Estagiário</option>
+                  </select>
+                </div>
+
+                <div class="item-flex-cadastro">
+                  <label for="funcaoUsuario">Função</label>
+                  <input type="text" required class="metade">
+                </div>
+              </div>
+            </div>
+
+            <div class="item-cadastro">
+
+              <h2>Endereço</h2>
+
+              <label for="cepEnd">CEP</label>
+              <input data-cep="cep" type="text" autocomplete="off" id="cepEnd" placeholder="08780-911" maxlength="9">
+
+              <div class="cadastro-flex processo">
+                <div class="item-flex-cadastro">
+                  <label for="logradouroUsuario">Rua</label>
+                  <input type="text" autocomplete="off" id="logradouro" placeholder="Avenida Imperatriz Leopoldina"
+                    class="endereco-metade" data-cep="logradouro">
+                </div>
+                <div class="item-flex-cadastro">
+                  <label for="numeroUsuario">Número</label>
+                  <input type="text" autocomplete="off" id="numeroEnd" maxlength="6" data-cep="numero">
+                </div>
+
+              </div>
+
+              <div class="cadastro-flex">
+                <div class="item-flex-cadastro">
+                  <label for="bairroUsuario">Bairro</label>
+                  <input type="text" autocomplete="off" id="bairroEnd" placeholder="Vila Leopoldina" class="metade"
+                    data-cep="bairro">
+                </div>
+                <div class="item-flex-cadastro">
+                  <label for="cidadeUsuario">Cidade</label>
+                  <input type="text" autocomplete="off" id="cidadeEnd" class="metade" data-cep="localidade">
+                </div>
+                <div class="item-flex-cadastro">
+                  <label for="estadoUsuario">Estado</label>
+                  <input type="text" autocomplete="off" id="estadoEnd" class="metade" data-cep="uf">
+                </div>
+
+              </div>
+              <label for="complementoUsuario">Complemento</label>
+              <input type="text" autocomplete="off" id="complementoEnd" class="total">
+
+            </div>
+
+
+            <div class="item-cadastro">
+              <h2>Contato</h2>
+              <div class="cadastro-flex">
+                <div class="item-flex-cadastro">
+                  <label for="telefoneUsuario_1">Telefone 1</label>
+                  <input type="telefone" placeholder="(00) 0000-0000" required class="metade">
+                </div>
+                <div class="item-flex-cadastro">
+                  <label for="telefoneUsuario_2">Telefone 2</label>
+                  <input type="telefone" placeholder="(00) 0000-0000" required class="metade">
+                </div>
+
+              </div>
+
+
+            </div>
+
+            <div class="btn-cadastro">
+              <button class="btn-principal" id="enviar">Cadastrar</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

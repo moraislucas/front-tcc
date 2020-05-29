@@ -1,0 +1,41 @@
+
+
+.select-flex {
+    justify-content: flex-start;
+}
+
+.estado-civil,
+.sexo {
+    width: 30%;
+    padding: 15px;
+    margin: 10px auto 20px auto;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 1px solid var(--hover-link);
+    border-radius: 3px;
+}
+
+.estado-civil.total,
+.sexo.total {
+    width: 60%;
+}
+
+.select-item {
+    margin-right: 40px;
+}
+
+.estado-civil.metade,
+.sexo.metade {
+    width: 250px;
+}
+
+.estado-civil:focus,
+.sexo:focus {
+    border: 1px solid var(--azul-principal);
+    outline: none;
+    background: var(--azul-focus);
+}
+
+.telefone-assistido {
+    width: 250px;
+}

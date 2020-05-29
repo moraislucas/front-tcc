@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/geral.css">
+
+    <title>Detalhes do Responsável</title>
+</head>
+
+<body>
+
+    <div class="container-geral">
+
+        <!-- Inicio  menu lateral -->
+        <div class="menu-lateral item">
+            <div class="icone">
+                <img src="svg/juridico.svg" alt="Icone juridico">
+            </div>
+            <div class="lista-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="dashboard.html" class="btn-principal">
+                                <i data-feather="bar-chart-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assistidos.html" class="btn-principal">
+                                <i data-feather="user"></i>
+                                Assistidos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="processos.html" class="btn-principal">
+                                <i data-feather="folder"></i>
+                                Processos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cadastro-prazos.html" class="btn-principal">
+                                <i data-feather="clock"></i>
+                                Prazos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="uploads.html" class="btn-principal">
+                                <i data-feather="file"></i>
+                                Arquivos
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="usuario">
+                <ul>
+                    <li>
+                        <a href="#" title="Clique para sair">
+                            Lucas
+                            <i data-feather="log-out"></i>
+
+                        </a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Fim menu lateral -->
+
+
+        <div class="dashboard item">
+            <div class="dash-container">
+                <div class="cadastro">
+                    <!-- Titulo da Pagina -->
+                    <h1>Detalhes do Responsável </h1>
+                </div>
+
+                <div class="loading">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="cadastro-usuario" data-anime="right">
+
+                    <!-- Links pagina atual e anteriores -->
+                    <div class="breadcrumb-container">
+                        <nav class="breadcrumb-nav">
+                            <ul class="breadcrumb-links">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Assistidos</a></li>
+                                <!-- Conseguimos colocar o link da pagina do assistido aqui ? -->
+                                <li class="breadcrumb-item"><a href="#">João Junior da Silva</a></li>
+                                <li class="breadcrumb-item ativo">Detalhes do Responsável</li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <ul class="visualizacao-dados item-cadastro">
+                        <!-- Dados Pessoais -->
+                        <div>
+                            <h2>Dados Pessoais</h2>
+                            <li>
+                                <span>Nome Completo: </span>
+                                <span>Responsável da Silva Santos</span>
+                            </li>
+                            <li>
+                                <span>Data de Nasc.:: </span>
+                                <span>20/05/2020</span>
+                            </li>
+                            <li>
+                                <span>CPF: </span>
+                                <span>123.456.789-00</span>
+                            </li>
+                            <li>
+                                <span>RG: </span>
+                                <span>98.765.432-1</span>
+                            </li>
+                            <li>
+                                <span>Endereço de e-mail: </span>
+                                <span>maria@maria.com</span>
+                            </li>
+                            <li>
+                                <span>Profissão: </span>
+                                <span>Médica</span>
+                            </li>
+                            <li>
+                                <span>Estado Civil: </span>
+                                <span>Casado</span>
+                            </li>
+                            <li>
+                                <span>Sexo: </span>
+                                <span>Feminino</span>
+                            </li>
+                            <li>
+                                <span>Telefone 1: </span>
+                                <span>(11)2121-2323</span>
+                            </li>
+                            <li>
+                                <span>Telefone 2: </span>
+                                <span>(11)4546-8979</span>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace();
+    </script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

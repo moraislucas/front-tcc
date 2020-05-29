@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/geral.css">
+
+    <title>Detalhes do Assistido</title>
+</head>
+
+<body>
+
+    <div class="container-geral">
+
+        <!-- Inicio  menu lateral -->
+        <div class="menu-lateral item">
+            <div class="icone">
+                <img src="svg/juridico.svg" alt="Icone juridico">
+            </div>
+            <div class="lista-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="dashboard.html" class="btn-principal">
+                                <i data-feather="bar-chart-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assistidos.html" class="btn-principal">
+                                <i data-feather="user"></i>
+                                Assistidos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="processos.html" class="btn-principal">
+                                <i data-feather="folder"></i>
+                                Processos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cadastro-prazos.html" class="btn-principal">
+                                <i data-feather="clock"></i>
+                                Prazos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="uploads.html" class="btn-principal">
+                                <i data-feather="file"></i>
+                                Arquivos
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="usuario">
+                <ul>
+                    <li>
+                        <a href="#" title="Clique para sair">
+                            Lucas
+                            <i data-feather="log-out"></i>
+
+                        </a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Fim menu lateral -->
+
+
+        <div class="dashboard item">
+            <div class="dash-container">
+                <div class="cadastro">
+                    <!-- Titulo da Pagina -->
+                    <h1>Detalhes do Assistido</h1>
+                </div>
+
+                <div class="loading">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="cadastro-usuario" data-anime="right">
+
+                    <!-- Links pagina atual e anteriores -->
+                    <div class="breadcrumb-container">
+                        <nav class="breadcrumb-nav">
+                            <ul class="breadcrumb-links">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Assistidos</a></li>
+                                <li class="breadcrumb-item ativo">Detalhes do Assistido</li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <ul class="visualizacao-dados item-cadastro">
+
+                        <!-- Dados Pessoais -->
+                        <div>
+                            <h2>Dados Pessoais</h2>
+                            <li>
+                                <span>Identificação: </span>
+                                <span data-identificacao>Autor</span>
+                            </li>
+                            <li>
+                                <span>Nome completo: </span>
+                                <span>Assistido da Silva Santos</span>
+                            </li>
+                            <li>
+                                <span>Data de Nasc.:</span>
+                                <span class="apenas-data">
+                                    25/03/1994 00:00:00</span>
+                            </li>
+                            <li>
+                                <span>CPF: </span>
+                                <span>123.456.789-00</span>
+                            </li>
+                            <li>
+                                <span>RG: </span>
+                                <span>98.765.432-1</span>
+                            </li>
+                            <li>
+                                <span>Endereço de e-mail: </span>
+                                <span>assistido@mail.com</span>
+                            </li>
+                            <li>
+                                <span>Profissão: </span>
+                                <span>Desenvolvedor Front-End</span>
+                            </li>
+                            <li>
+                                <span>Estado Civil: </span>
+                                <span>Solteiro</span>
+                            </li>
+                            <li>
+                                <span>Sexo: </span>
+                                <span>Masculino</span>
+                            </li>
+                            <li>
+                                <span>Telefone 1: </span>
+                                <span>(11)2121-2323</span>
+                            </li>
+                            <li>
+                                <span>Telefone 2: </span>
+                                <span>(11)4546-8979</span>
+                            </li>
+                            <li>
+                                <span>Renda Familiar: </span>
+                                <span>Até 3 salários</span>
+                            </li>
+                        </div>
+
+                        <!-- Endereço 01 -->
+                        <div>
+                            <h2>Dados de Endereço 01</h2>
+                            <li>
+                                <span>CEP</span>
+                                <span>06184-230</span>
+                            </li>
+                            <li>
+                                <span>Logradouro:</span>
+                                <span>Av. Logo Ali</span>
+                            </li>
+                            <li>
+                                <span>Número:</span>
+                                <span>2189</span>
+                            </li>
+                            <li>
+                                <span>Bairro:</span>
+                                <span>Vila Leopoldina</span>
+                            </li>
+                            <li>
+                                <span>Cidade:</span>
+                                <span>São Paulo</span>
+                            </li>
+                            <li>
+                                <span>Estado:</span>
+                                <span>SP</span>
+                            </li>
+                            <li>
+                                <span>Complemento:</span>
+                                <span>Perto da Loja</span>
+                            </li>
+                        </div>
+
+                        <!-- Endereço 02 -->
+                        <div>
+                            <h2>Dados de Endereço 02</h2>
+                            <li>
+                                <span>CEP</span>
+                                <span>-</span>
+                            </li>
+                            <li>
+                                <span>Logradouro:</span>
+                                <span>-</span>
+                            </li>
+                            <li>
+                                <span>Número:</span>
+                                <span>-</span>
+                            </li>
+                            <li>
+                                <span>Bairro:</span>
+                                <span>-</span>
+                            </li>
+                            <li>
+                                <span>Cidade:</span>
+                                <span>-</span>
+                            </li>
+                            <li>
+                                <span>Estado:</span>
+                                <span>-</span>
+                            </li>
+                            <li>
+                                <span>Complemento:</span>
+                                <span>-</span>
+                            </li>
+                        </div>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="btn-cadastro btn-responsavel">
+                <a asp-controller="Responsavel" asp-action="DetalhesResponsavel" asp-route-id="@Model.IdAssistido"
+                    class="btn-principal" data-responsavel>
+                    Dados Responsável
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace();
+    </script>
+    <script src="js/script-completo.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/geral.css">
+  <title>Cadastro de Assistido</title>
+</head>
+
+<body>
+
+  <!-- Inicio menu lateral -->
+
+  <div class="container-geral">
+    <div class="menu-lateral item">
+      <div class="icone">
+        <img src="svg/juridico.svg" alt="Icone juridico">
+      </div>
+      <div class="lista-menu">
+        <nav>
+          <ul>
+            <li>
+              <a href="dashboard.html" class="btn-principal">
+                <i data-feather="bar-chart-2"></i>
+                Dashboard
+              </a>
+            </li>
+
+            <li>
+              <a href="assistidos.html" class="btn-principal">
+                <i data-feather="user"></i>
+                Assistidos
+              </a>
+            </li>
+
+            <li>
+              <a href="processos.html" class="btn-principal">
+                <i data-feather="folder"></i>
+                Processos
+              </a>
+            </li>
+            <li>
+              <a href="cadastro-prazos.html" class="btn-principal">
+                <i data-feather="clock"></i>
+                Prazos
+              </a>
+            </li>
+            <li>
+              <a href="uploads.html" class="btn-principal">
+                <i data-feather="file"></i>
+                Arquivos
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="usuario">
+        <ul>
+          <li>
+            <a href="#" title="Clique para sair">
+              Lucas
+              <i data-feather="log-out"></i>
+
+            </a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Fim menu lateral -->
+
+    <body>
+      <!-- Fim menu lateral -->
+      <div class="dashboard item">
+        <div class="dash-container">
+          <div class="cadastro">
+            <h1>Cadastro de Assistido</h1>
+
+          </div>
+
+          <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="cadastro-usuario" data-anime="right">
+
+            <div class="breadcrumb-container">
+              <nav class="breadcrumb-nav">
+                <ul class="breadcrumb-links">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">Assistido</a></li>
+                  <li class="breadcrumb-item ativo">Cadastro de Assistido</li>
+                </ul>
+              </nav>
+            </div>
+
+
+            <form asp-controller="Assistido" asp-action="CadastroAssistido" enctype="multipart/form-data">
+
+              <section class="item-cadastro">
+
+                <h2>Pessoal</h2>
+                <section class="cadastro-flex" id="nome-upload">
+
+                  <div class="item-flex-cadastro">
+                    <label for="tipoAssistido">Identificação do:</label>
+                    <select name="tipoAssistido" id="tipoAssistido" class="metade select-item" asp-for="TipoAssistido">
+                      <option value="selecione">Selecione</option>
+                      <option value="menor">Menor</option>
+                      <option value="autor">Autor</option>
+                      <option value="reu">Réu</option>
+                      <option value="representante">Representante</option>
+                    </select>
+
+                  </div>
+
+                </section>
+                <div class="item-flex-cadastro">
+                  <label for="nomeAssistido">Nome completo</label>
+                  <input autocomplete="off" type="text" name="nomeAssistido" placeholder="Assistido da Silva Santos"
+                    required class="total" asp-for="NomeAssistido">
+                </div>
+
+
+                <section class="cadastro-flex">
+                  <div class="item-flex-cadastro">
+                    <label for="dataNascimentoAssistido">Data Nascimento</label>
+                    <input autocomplete="off" type="date" name="dataNascimentoAssistido" placeholder="DD/MM/AAAA"
+                      required class="metade validaData" asp-for="DataNascimentoAssistido">
+
+                  </div>
+
+                  <div class="item-flex-cadastro">
+                    <label for="CPFAssistido">CPF</label>
+                    <input autocomplete="off" type="text" name="CPFAssistido" placeholder="xxx.xxx.xxx-xx"
+                      maxlength="14" required class="metade" asp-for="CPFAssistido" data-cpf>
+
+                  </div>
+
+                  <div class="item-flex-cadastro">
+                    <label for="RGAssistido">RGAssistido</label>
+                    <input autocomplete="off" type="text" name="RGAssistido" placeholder="xx.xxx.xxx-x" maxlength="9"
+                      required class="metade" asp-for="RGAssistido" data-rg>
+
+                  </div>
+                </section>
+
+                <label for="emailAssistido">E-mail</label>
+                <input autocomplete="off" type="email" name="emailAssistido" placeholder="assistido@email.com" required
+                  class="total" asp-for="EmailAssistido">
+
+                <label for="profissaoAssistido">Profissão</label>
+                <input autocomplete="off" type="text" name="profissaoAssistido" placeholder="Arquiteto" required
+                  asp-for="ProfissaoAssistido">
+
+                <section class="cadastro-flex select-flex">
+                  <div class="item-flex-cadastro">
+                    <label for="estadoCivilAssistido">Estado Civil</label>
+                    <select name="estadoCivilAssistido" id="estadoCivilAssistido" class="metade select-item"
+                      asp-for="EstadoCivelAssistido">
+                      <option value="selecione">Selecione</option>
+                      <option value="solteiro">Solteiro</option>
+                      <option value="casado">Casado</option>
+                      <option value="divorciado">Divorciado</option>
+                      <option value="viuvo">Viúvo</option>
+                      <option value="separado">Separado</option>
+                    </select>
+                  </div>
+
+                  <div class="item-flex-cadastro">
+                    <label for="sexoAssistido">Sexo</label>
+                    <select name="sexoAssistido" id="sexoAssistido" class="metade select-item" asp-for="SexoAssistido">
+                      <option value="selecione">Selecione</option>
+                      <option value="M">Masculino</option>
+                      <option value="F">Feminino</option>
+                      <option value="N">Não informar</option>
+                    </select>
+                  </div>
+                </section>
+
+
+
+
+                <section class="cadastro-flex select-flex">
+                  <div class="item-flex-cadastro">
+                    <label for="telefone-1">Telefone 1</label>
+                    <input autocomplete="off" type="text" name="telefone-1" placeholder="(xx) xxxx-xxx" maxlength="11"
+                      required class="metade telefone-assistido" asp-for="NumTelefoneAssistido_1">
+                  </div>
+                  <div class="item-flex-cadastro">
+                    <label for="telefone-2">Telefone 2</label>
+                    <input type="text" name="telefone-2" placeholder="(xx) xxxx-xxx" maxlength="11" required
+                      class="metade telefone-assistido" autocomplete="off" asp-for="NumTelefoneAssistido_2">
+                  </div>
+                </section>
+
+                <section class="select-item">
+                  <label for="rendaAssistido">Renda Familiar</label>
+                  <select name="rendaAssistido" id="rendaAssistido" class="metade select-item">
+                    <option value="selecione">Selecione</option>
+                    <option value="até-3-salarios">Até 3 salários</option>
+                    <option value="acima-3-salarios">Acima de 3 salários</option>
+                  </select>
+
+                </section>
+
+              </section>
+
+              <section class="item-cadastro">
+
+                <h2>Endereço</h2>
+
+                <label for="cepAssistido">CEP</label>
+                <input data-cep="cep" type="text" autocomplete="off" id="cepAssistido" placeholder="08780-911"
+                  maxlength="9" asp-for="CepAssistido">
+
+                <section class="cadastro-flex processo">
+                  <div class="item-flex-cadastro">
+                    <label for="logradouroAssistido">Rua</label>
+                    <input type="text" autocomplete="off" id="logradouroAssistido"
+                      placeholder="Avenida Imperatriz Leopoldina" class="endereco-metade" data-cep="logradouro"
+                      asp-for="LogradouroAssistido">
+                  </div>
+                  <div class="item-flex-cadastro">
+                    <label for="numeroAssistido">Número</label>
+                    <input type="text" autocomplete="off" id="numeroAssistido" maxlength="6" data-cep="numero"
+                      asp-for="NumeroAssistido">
+                  </div>
+
+                </section>
+
+                <section class="cadastro-flex">
+                  <div class="item-flex-cadastro">
+                    <label for="bairroAssistido">Bairro</label>
+                    <input type="text" autocomplete="off" id="bairroAssistido" placeholder="Vila Leopoldina"
+                      class="metade" data-cep="bairro">
+                  </div>
+                  <div class="item-flex-cadastro">
+                    <label for="cidadeAssistido">Cidade</label>
+                    <input type="text" autocomplete="off" id="cidadeAssistido" class="metade" data-cep="localidade"
+                      placeholder="São Paulo" asp-for="CidadeAssistido">
+                  </div>
+                  <div class="item-flex-cadastro">
+                    <label for="estadoAssistido">Estado</label>
+                    <input type="text" autocomplete="off" id="estadoAssistido" placeholder="SP" class="metade"
+                      data-cep="uf" maxlength="2" asp-for="EstadoCivelAssistido">
+                  </div>
+
+                </section>
+
+                <label for="complementoAssistido">Complemento</label>
+                <input type="text" autocomplete="off" id="complementoAssistido" class="total"
+                  asp-for="ComplementoAssistido">
+
+              </section>
+
+              <div class="btn-endereco">
+                <a href="#" class="btn-secundario" data-endereco="btn">+ endereço</a>
+              </div>
+
+
+              <div class="item-cadastro" data-endereco="conteudo">
+
+                <h2>Endereço 2 <span class="opcional"> - opcional</span></h2>
+
+                <label for="cep2Assistido">CEP</label>
+                <input data-cep="cep2" type="text" autocomplete="off" id="cep2Assistido" placeholder="08780-911"
+                  maxlength="9" asp-for="Cep2Assistido">
+
+                <section class="cadastro-flex processo">
+                  <div class="item-flex-cadastro">
+                    <label for="logradouro2Assistido">Rua</label>
+                    <input type="text" autocomplete="off" id="logradouro2Assistido"
+                      placeholder="Avenida Imperatriz Leopoldina" class="endereco-metade" data-cep="logradouro"
+                      asp-for="Logradouro2Assistido">
+                  </div>
+                  <div class="item-flex-cadastro">
+                    <label for="numero2Assistido">Número</label>
+                    <input type="text" autocomplete="off" id="numero2Assistido" maxlength="6" data-cep="numero"
+                      asp-for="Numero2Assistido">
+                  </div>
+
+                </section>
+
+                <div class="cadastro-flex">
+                  <div class="item-flex-cadastro">
+                    <label for="bairro2Assistido">Bairro</label>
+                    <input type="text" autocomplete="off" id="bairro2Assistido" placeholder="Vila Leopoldina"
+                      class="metade" data-cep="bairro">
+                  </div>
+                  <div class="item-flex-cadastro">
+                    <label for="cidade2Assistido">Cidade</label>
+                    <input type="text" autocomplete="off" id="cidade2Assistido" class="metade" data-cep="localidade"
+                      asp-for="Cidade2Assistido">
+                  </div>
+                  <div class="item-flex-cadastro">
+                    <label for="estado2Assistido">Estado</label>
+                    <input type="text" autocomplete="off" id="estado2Assistido" class="metade" data-cep="uf"
+                      maxlength="2" asp-for="Estado2Assistido">
+                  </div>
+
+                </div>
+                <label for="complemento2Assistido">Complemento</label>
+                <input type="text" autocomplete="off" id="complemento2Assistido" class="total"
+                  asp-for="Complemento2Assistido">
+
+              </div>
+
+              <div class="btn-cadastro">
+                <button class="btn-principal">Cadastrar</button>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://unpkg.com/feather-icons"></script>
+      <script>
+        feather.replace();
+      </script>
+      <script src="js/app.js"></script>
+
+    </body>
+
+</html>

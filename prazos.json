@@ -1,0 +1,78 @@
+[{
+        "dataAudiencia": "2020-05-24T00:00:00",
+        "horaAudiencia": "15:00:00",
+        "numeroProcesso": "121821003050501132",
+        "descricaoAudiencia": "Audiencia 01"
+    },
+    {
+        "dataAudiencia": "2020-05-24T00:00:00",
+        "horaAudiencia": "15:30:00",
+        "numeroProcesso": "121821003050501132",
+        "descricaoAudiencia": "Audiencia 02"
+    },
+    {
+        "dataAudiencia": "2020-05-24T00:00:00",
+        "horaAudiencia": "10:00:00",
+        "numeroProcesso": "121821003050501132",
+        "descricaoAudiencia": "Audiencia 03"
+    },
+    {
+        "dataAudiencia": "2020-05-24T00:00:00",
+        "horaAudiencia": "17:00:00",
+        "numeroProcesso": "121821003050501132",
+        "descricaoAudiencia": "Audiencia 04"
+    },
+    {
+        "dataAudiencia": "2020-05-24T00:00:00",
+        "horaAudiencia": "12:00:00",
+        "numeroProcesso": "121821003050501132",
+        "descricaoAudiencia": "Audiencia 05"
+    },
+    {
+        "dataAudiencia": "2020-06-02T00:00:00",
+        "horaAudiencia": "14:30:00",
+        "numeroProcesso": "0151511519181132132",
+        "descricaoAudiencia": "Audiencia Teste01"
+    },
+    {
+        "dataAudiencia": "2020-05-29T00:00:00",
+        "horaAudiencia": "14:30:00",
+        "numeroProcesso": "0151511519181132132",
+        "descricaoAudiencia": "Audiencia Teste02"
+    }, {
+        "dataAudiencia": "2020-05-28T00:00:00",
+        "horaAudiencia": "14:30:00",
+        "numeroProcesso": "0151511519181132132",
+        "descricaoAudiencia": "Audiencia Teste03"
+    }, {
+        "dataAudiencia": "2020-06-15T00:00:00",
+        "horaAudiencia": "14:30:00",
+        "numeroProcesso": "0151511519181132132",
+        "descricaoAudiencia": "Audiencia Teste03"
+    }, {
+        "dataAudiencia": "2020-06-20T00:00:00",
+        "horaAudiencia": "14:30:00",
+        "numeroProcesso": "0151511519181132132",
+        "descricaoAudiencia": "Audiencia Teste03"
+    }, {
+        "dataAudiencia": "2020-06-20T00:00:00",
+        "horaAudiencia": "14:35:00",
+        "numeroProcesso": "0151511519181132132",
+        "descricaoAudiencia": "Audiencia Teste03"
+    }, {
+        "dataAudiencia": "2020-05-24T00:00:00",
+        "horaAudiencia": "13:35:00",
+        "numeroProcesso": "0151511519181132132",
+        "descricaoAudiencia": "Audiencia Teste03"
+    }, {
+        "dataAudiencia": "2020-11-10T00:00:00",
+        "horaAudiencia": "13:35:00",
+        "numeroProcesso": "0151511519181132132",
+        "descricaoAudiencia": "Audiência de conciliação"
+    }, {
+        "dataAudiencia": "2020-05-25T00:00:00",
+        "horaAudiencia": "13:00:00",
+        "numeroProcesso": "0151511519181132132",
+        "descricaoAudiencia": "Audiência de Justificação"
+    }
+]
