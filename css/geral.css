@@ -1474,7 +1474,7 @@ svg {
     width: 100%;
     position: relative;
     z-index: 999;
-    padding: 40px 20px;
+    padding: 33px 20px;
     overflow-x: auto;
   }
 
@@ -1483,7 +1483,8 @@ svg {
     z-index: 9999;
     color: white;
     display: block;
-    bottom: 10px;
+    top: 5px;
+    right: 45px;
     position: absolute;
     animation: arraste .7s alternate infinite;
     width: 30px;
