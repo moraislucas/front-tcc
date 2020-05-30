@@ -22,9 +22,11 @@ initPrimeiroAcesso();
 
 
 function addAnimate() {
-    const dataAnime = document.querySelector('[data-anime]');
-    if (dataAnime)
-        dataAnime.classList.add('animate');
+    const dataAnime = document.querySelectorAll('[data-anime]');
+    if (dataAnime.length)
+        dataAnime.forEach(item => {
+            item.classList.add('animate');
+        })
 }
 
 function initPage() {
@@ -411,7 +413,6 @@ initUploadArquivos();
 //         });
 //     }
 
-
 // }
 
 // initFetchPage();
@@ -443,7 +444,7 @@ function initDashboard() {
         const nomeUsuario = document.querySelector('#NomeUsuarioLogado');
         if (nomeTopo && nomeUsuario)
             nomeTopo.innerHTML = `Olá, ${nomeUsuario.innerText.split(' ')[0]} 🙂`;
-    }, 2500);
+    });
 
 
     dataPorExtenso();
@@ -554,7 +555,7 @@ function initDashboard() {
             } else if (item.prazo.validade == 'proximos-dias') {
                 li.innerHTML = `
                 <span class="alerta-hora proximos-dias">${item.prazo.hora}</span>
-                <div class="alerta-infos">
+                <div class="alerta-infos" >
                 <span class="data-alerta">${item.prazo.data.toLocaleString().split(' ')[0]}</span>
                   <p>${item.prazo.descricao}</p>
                   <span>P: ${item.prazo.processo}</span>

@@ -70,13 +70,13 @@
     </div>
     <div class="dashboard item">
       <div class="dash-container">
-        <div class="dash-header">
+        <div class="dash-header" data-anime="right">
           <h2 class="bem-vindo">Bem vindo :)</h2>
-          <a href="/Home/index" class="btn-principal">Novo</a>
+          <a href="painel-novo.html" class="btn-principal">Novo</a>
         </div>
 
         <!-- Resumo Dashboard-->
-        <section class="resumo-dashboard">
+        <section class="resumo-dashboard" data-anime="right">
           <h3>Resumo das Audiências</h3>
           <div class="resumo-container">
             <!-- Vencem Hoje -->
@@ -109,7 +109,7 @@
         <!-- Detalhes -->
         <section class="detalhes-dash">
           <!-- vencendo -->
-          <ul class="vencendo-prazo">
+          <ul class="vencendo-prazo" data-anime="bottom">
             <h3>Próximas datas <i data-feather="arrow-down"></i></h3>
             <!-- Alertas serão renderizado via JS -->
           </ul>
@@ -120,7 +120,7 @@
           </div>
 
           <!-- total Prazos -->
-          <div class="total-prazos">
+          <div class="total-prazos" data-anime="bottom">
             <div class="resumo-item">
               <div class="icone-dash"><i data-feather="clock"></i></div>
               <div class="resumo-info" data-dash="todos-prazos">
@@ -139,7 +139,7 @@
     <!--  -->
   </div>
 
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="./js/feather.js"></script>
   <script>
     feather.replace();
   </script>

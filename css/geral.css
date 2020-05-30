@@ -225,6 +225,10 @@ p {
   transition-delay: .2s
 }
 
+[data-anime]:nth-child(odd) {
+  transition-delay: .5s
+}
+
 [data-anime=left] {
   transform: translate3d(-50px, 0, 0)
 }
@@ -243,7 +247,7 @@ p {
 
 [data-anime].animate {
   opacity: 1;
-  transform: translate3d(0, 0, 0)
+  transform: translate3d(0, 0, 0);
 }
 
 
@@ -1899,10 +1903,7 @@ svg {
   }
 
   /* Estilos gerais */
-  .modal-erro,
-  .modal-sucesso {
-    padding: 10px;
-  }
+
 
   .btn-principal,
   a.btn-principal,
@@ -1997,6 +1998,5 @@ svg {
   .total-prazos {
     margin-bottom: 60px;
   }
-
 
 }
