@@ -121,7 +121,6 @@ label {
   transform: translate3d(0, -5px, 0)
 }
 
-
 .btn-endereco {
   margin: 20px 0
 }
@@ -225,10 +224,6 @@ p {
   transition-delay: .2s
 }
 
-[data-anime]:nth-child(odd) {
-  transition-delay: .5s
-}
-
 [data-anime=left] {
   transform: translate3d(-50px, 0, 0)
 }
@@ -247,9 +242,8 @@ p {
 
 [data-anime].animate {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0)
 }
-
 
 .label-reset {
   display: inline !important
@@ -469,7 +463,7 @@ select:focus {
 
 .breadcrumb-container {
   padding: 20px 0;
-  margin: 10px 0;
+  margin: 10px 0
 }
 
 .breadcrumb-links {
@@ -1098,7 +1092,7 @@ svg {
 .titulo h1 {
   font-size: 2.5rem;
   margin-top: -60px;
-  margin-bottom: 20px;
+  margin-bottom: 20px
 }
 
 .botoes {
@@ -1412,61 +1406,26 @@ svg {
 }
 
 .historico-processo {
-  grid-column: 1 /-1;
+  grid-column: 1/-1
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* RESPONSIVO */
-
-/*Estilo para tablets*/
-/* Tablet */
 
 @media only screen and (max-width:1200px) {
   * {
-    box-sizing: border-box;
+    box-sizing: border-box
   }
 
-  /* Painel novo */
   .container-geral {
     width: 100%;
     height: auto;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas:
-      "menu-lateral"
-      "dashboard"
-    ;
+    grid-template-areas: "menu-lateral""dashboard"
   }
 
   .item {
     max-width: 100%;
-    height: auto;
+    height: auto
   }
 
   .menu-lateral {
@@ -1479,13 +1438,13 @@ svg {
     position: relative;
     z-index: 999;
     padding: 33px 20px;
-    overflow-x: auto;
+    overflow-x: auto
   }
 
   .menu-lateral::after {
     content: '';
     z-index: 9999;
-    color: white;
+    color: #fff;
     display: block;
     top: 5px;
     right: 45px;
@@ -1493,129 +1452,116 @@ svg {
     animation: arraste .7s alternate infinite;
     width: 30px;
     height: 20px;
-    background: url(../svg/seta-menu.svg) no-repeat center center;
+    background: url(../svg/seta-menu.svg) no-repeat center center
   }
 
   @keyframes arraste {
     from {
-      transform: translate3d(40px, 0, 0);
+      transform: translate3d(40px, 0, 0)
     }
 
     to {
-      transform: translate3d(0, 0, 0);
-
+      transform: translate3d(0, 0, 0)
     }
   }
 
   .menu-lateral img {
     width: 40px;
-    margin: 0 auto;
+    margin: 0 auto
   }
 
   .menu-lateral .lista-menu {
     margin: 0 auto;
-    display: block;
+    display: block
   }
 
   .lista-menu ul {
     width: auto;
-    display: flex;
-
+    display: flex
   }
 
   .lista-menu a:hover {
-    background: var(--azul-secundario);
+    background: var(--azul-secundario)
   }
 
-
   .lista-menu li a {
-    margin-bottom: 0;
-
+    margin-bottom: 0
   }
 
   .lista-menu li a {
     margin-left: 10px;
     width: auto;
-    padding: 15px;
+    padding: 15px
   }
 
   .lista-menu svg {
-    margin-right: 5px;
+    margin-right: 5px
   }
 
   .lista-menu svg {
     width: 20px;
-    height: 20px;
+    height: 20px
   }
 
   .usuario {
-    display: block;
-
+    display: block
   }
 
   .usuario ul {
-    width: auto;
+    width: auto
   }
 
   .usuario li a svg {
-    margin-left: 10px;
+    margin-left: 10px
   }
 
-  /* dash  no grid*/
   .dashboard {
     grid-area: dashboard;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 10px
   }
 
   .painel-container {
     width: 100%;
     height: auto;
     margin: 120px auto;
-    display: block;
+    display: block
   }
 
   .titulo h1 {
     font-size: 2rem;
-    margin: 20px 5px;
+    margin: 20px 5px
   }
 
   .botoes {
     height: auto;
-    margin: 20px auto;
+    margin: 20px auto
   }
 
   .botoes a {
-    font-size: 1rem;
+    font-size: 1rem
   }
 }
 
-/* Celular */
 @media only screen and (max-width:700px) {
-
-
-  /* Login */
   .body-login {
-    background: none;
-    background-size: cover;
-    width: 100%;
-    height: initial;
-    position: relative;
+    background: 0 0;
+    width: 100vw;
+    height: initial
   }
 
   .login-container {
     margin: 0;
     padding: 60px 10px;
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    display: block;
-    position: relative;
+    display: block
   }
 
   .login-container .left h1 {
-    font-size: 1.25rem;
-    color: black;
+    font-size: 1.5rem;
+    color: #000
   }
 
   .login-container .primeiro-acesso {
@@ -1623,119 +1569,113 @@ svg {
     text-align: right;
     display: block;
     width: 100%;
-    font-size: .875rem;
-    color: black;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 10px
   }
 
   .mensagem-cadastro {
-    width: 95%;
+    width: 100%;
     top: 90px;
-    left: 10px;
+    left: 0
   }
 
   .login-container .esqueceu-senha {
     position: static;
     display: block;
     margin: 10px 0;
-    max-width: 100%;
+    max-width: 100%
   }
 
   .login-container .esqueceu-senha:hover {
-    color: var(--card-aviso);
+    color: var(--card-aviso)
   }
 
   .login-container .right {
     margin: 40px auto;
-    max-width: 100%;
+    width: auto
   }
 
   .login-container .right h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: left;
     margin-bottom: 20px;
-    width: auto;
+    width: auto
   }
 
   .login-container .right form {
     display: block;
-    position: relative;
-    height: auto;
+    position: relative
   }
 
   .login-container .right form label {
     font-size: 1rem;
-    display: block;
+    display: block
   }
 
   .login-container .right form input {
     width: 100%;
-    font-size: 1rem;
-    display: block;
+    font-size: 1rem
   }
 
   .login-container .right form button {
-    display: block;
+    display: block
   }
-
-  /* Esqueceu a senha */
 
   .esqueceu-senha {
     margin: 0 auto;
     max-width: 100%;
-    position: relative;
-    font-size: .875rem;
+    position: relative
   }
 
   .esqueceu-senha h1 {
-    font-size: 1.8rem;
+    font-size: 1.8rem
   }
 
   .esqueceu-senha p {
-    max-width: 90%;
+    max-width: 90%
   }
 
   .esqueceu-senha form label {
     display: block;
-    font-size: 1rem;
+    font-size: 1rem
   }
 
   .esqueceu-senha form input {
     display: block;
     width: 100%;
     padding: 15px;
-    font-size: 1rem;
+    font-size: 1rem
   }
 
   .esqueceu-senha form button {
-    width: 50%;
+    width: 50%
   }
 
   .link-retorno {
     max-width: 100%;
-    margin: 10px 0 20px 0;
+    margin: 10px 0 20px 0
   }
 
-  /* Painel Novo */
   .titulo h1 {
     font-size: 1.8rem;
     text-align: center;
     margin-top: -40px;
-    margin-bottom: 20px;
+    margin-bottom: 20px
   }
 
   .chamada-dashboard {
-    top: -60px;
+    top: -60px
   }
 
   .painel-container a svg {
     width: 30px;
     height: 30px;
-    margin-bottom: 0;
+    margin-bottom: 0
   }
 
   .botoes {
-    display: block;
+    display: block
   }
 
   .botoes a {
@@ -1743,181 +1683,167 @@ svg {
     height: 13vh;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: center
   }
 
-  /* Cadastro Usuario */
   .dash-container {
     width: 100%;
-    overflow: initial;
+    overflow: initial
   }
 
   .cadastro h1 {
-    font-size: 1.5rem;
+    font-size: 1.5rem
   }
 
   .cadastro h1::before {
     width: 30px;
-    height: 3px;
+    height: 3px
   }
 
   .item-cadastro h2 {
-    font-size: 1.25rem;
+    font-size: 1.25rem
   }
 
   .item-cadastro h2::after {
     content: '';
     width: 100%;
-    margin: 20px 0;
+    margin: 20px 0
   }
 
   .item-cadastro label {
-    font-size: 1rem;
+    font-size: 1rem
   }
 
   .item-cadastro input,
   .item-cadastro textarea {
     width: auto;
     font-size: 1rem !important;
-    margin: 10px auto 20px auto;
+    margin: 10px auto 20px auto
   }
 
-  .item-cadastro input.total,
+  .endereco-metade,
   .item-cadastro input.metade,
-  .select-item.metade,
-  .endereco-metade {
+  .item-cadastro input.total,
+  .select-item.metade {
     width: 100% !important;
     margin-right: 0 !important;
-    font-size: 1rem !important;
+    font-size: 1rem !important
   }
 
   .cadastro-flex {
     display: block;
-    position: relative;
+    position: relative
   }
 
   .select-item {
-    margin-right: 0;
+    margin-right: 0
   }
-
 
   .regra-senha {
     width: 100%;
-    display: flex;
+    display: flex
   }
 
   .btn-cadastro {
-    max-width: 100%;
+    max-width: 100%
   }
 
   .breadcrumb-links li {
-    font-size: .875rem;
+    font-size: .875rem
   }
 
   .historicoProcesso {
-    width: 100% !important;
+    width: 100% !important
   }
 
-  /* Upload */
   .upload-flex {
     display: block;
     position: relative;
-    margin-top: 100px;
+    margin-top: 100px
   }
 
   .upload-flex a {
     position: absolute;
     top: -80px;
-    right: 0;
+    right: 0
   }
 
   .item-upload {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr
   }
 
   .dados-assistido-download {
-    display: block;
+    display: block
   }
 
-  /* Detalhes */
   .visualizacao-dados li {
     font-size: .875rem;
-    gap: 20px;
+    gap: 20px
   }
 
-  /* Tables */
   .dash-header {
-    width: 100%;
+    width: 100%
   }
-
 
   .dash-header input {
     width: 70%;
     font-size: 1rem;
     padding: 16px;
-    height: auto;
+    height: auto
   }
 
   .dash-header form .btn-principal {
-    margin: 20px 0;
+    margin: 20px 0
   }
 
   .dash-header a {
-    padding: 15px 40px !important;
-  }
-
-  .table-container {
-    /* background: silver; */
+    padding: 15px 40px !important
   }
 
   .table {
-    max-width: 100%;
+    max-width: 100%
   }
 
-  th,
-  td {
+  td,
+  th {
     padding: 10px;
-    font-size: .775rem;
+    font-size: .775rem
   }
 
   .acoes {
-    /* display: block; */
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start
   }
 
   .acoes a {
     padding: 3px;
-    font-size: .675rem;
+    font-size: .675rem
   }
 
   .acoes a:nth-child(2) {
-    margin: 5px 0 !important;
+    margin: 5px 0 !important
   }
 
   .acoes a+a {
-    margin-left: 0;
+    margin-left: 0
   }
 
   .modal-container {
     margin-top: 60px;
     width: 95%;
     max-width: 450px;
-    padding: 20px;
+    padding: 20px
   }
-
-  /* Estilos gerais */
-
 
   .btn-principal,
   a.btn-principal,
   button.btn-principal {
     padding: 18px;
-    font-size: .875rem;
+    font-size: .875rem
   }
 
   .btn-endereco a {
-    padding: 7px !important;
+    padding: 7px !important
   }
 
   .btn-editar,
@@ -1925,21 +1851,20 @@ svg {
   .btn-remover,
   .btn-visualizar {
     padding: 4px;
-    font-size: .675rem;
+    font-size: .675rem
   }
 
   p {
     font-size: .875rem;
-    ;
-    line-height: 1.4rem;
+    line-height: 1.4rem
   }
 
   .modal-container {
-    margin-top: 180px;
+    margin-top: 180px
   }
 
   .modal-title .info-delete .icone {
-    font-size: 1.5rem;
+    font-size: 1.5rem
   }
 
   .modal-title .info-delete {
@@ -1947,11 +1872,11 @@ svg {
   }
 
   .modal-body {
-    padding: 20px 0;
+    padding: 20px 0
   }
 
   .modal-body p {
-    font-size: 1rem;
+    font-size: 1rem
   }
 
   .opcional {
@@ -1959,48 +1884,45 @@ svg {
   }
 
   .breadcrumb-container {
-    padding: 10px 0;
+    padding: 10px 0
   }
 
   .breadcrumb-links li+li::before {
-    margin: 0 10px;
+    margin: 0 10px
   }
 
   .gerar-pdf {
-    margin-top: 40px;
+    margin-top: 40px
   }
 
-  /* Novos Dashboard */
   .bem-vindo {
-    font-size: 1.3rem;
+    font-size: 1.3rem
   }
 
   .resumo-dashboard .resumo-container {
     margin-top: 20px;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 20px
   }
 
   .resumo-dashboard .resumo-container .resumo-item {
-    border-right: none;
+    border-right: none
   }
 
-  /* Proximas audiencias */
   .detalhes-dash {
     grid-template-columns: 1fr;
-    overflow: initial;
+    overflow: initial
   }
 
   .vencendo-prazo {
-    padding-right: 0;
+    padding-right: 0
   }
 
   .data-hoje {
-    font-size: 1.5rem;
+    font-size: 1.5rem
   }
 
   .total-prazos {
-    margin-bottom: 60px;
+    margin-bottom: 60px
   }
-
 }
