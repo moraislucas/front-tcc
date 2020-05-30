@@ -79,29 +79,21 @@
       <div class="dash-container">
         <div class="dash-header">
 
-          <form action="">
+          <form action="" data-anime="left">
             <input type="text" name="consulta" placeholder="⟶   consulte o usuário ...">
             <button class="btn-principal">Buscar</button>
           </form>
-          <a href="cadastro-usuarios.html" class="btn-principal">Novo</a>
+          <a href="cadastro-usuarios.html" class="btn-principal" data-anime="right">Novo</a>
         </div>
       </div>
 
-      <div class="dash-container">
+      <div class="dash-container" data-anime="bottom">
         <div class="cadastro">
           <h1>Usuários cadastrados</h1>
 
         </div>
 
-        <div class="loading">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-
-        <div class="table-container" data-anime="right">
+        <div class="table-container" data-anime="bottom">
           <table class="table">
             <tr class="theader">
               <th>Documento</th>
@@ -113,7 +105,7 @@
 
 
             <!-- Primeira linha  -->
-            <tr>
+            <tr data-anime="bottom">
               <td>12112158998</td>
               <td>Lucas Assunção de Morais </td>
               <td>112121-2121</td>
@@ -131,7 +123,7 @@
             <!-- Primeira linha  -->
 
 
-            <tr>
+            <tr data-anime="bottom">
               <td>12112158998</td>
               <td>Paulo Felipe</td>
               <td>113434-3434</td>

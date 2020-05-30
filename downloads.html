@@ -79,7 +79,7 @@
 
         <div class="cadastro upload-flex">
           <h1>Arquivos do Assistido</h1>
-          <a href="uploads.html" class="btn-principal">Uploads <i data-feather="arrow-up"></i></a>
+          <a href="uploads.html" class="btn-principal" data-anime="bottom">Uploads <i data-feather="arrow-up"></i></a>
         </div>
         <div class="loading">
           <span></span>
@@ -89,17 +89,18 @@
         </div>
 
         <!-- Breadcrumb -->
-        <div class="breadcrumb-container">
-          <nav class="breadcrumb-nav">
-            <ul class="breadcrumb-links">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Arquivos</a></li>
-              <li class="breadcrumb-item ativo">Downloads de Arquivos</li>
-            </ul>
-          </nav>
-        </div>
 
-        <div class="cadastro-usuario" data-anime="right">
+
+        <div class="cadastro-usuario" data-anime="bottom">
+          <div class="breadcrumb-container">
+            <nav class="breadcrumb-nav">
+              <ul class="breadcrumb-links">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Arquivos</a></li>
+                <li class="breadcrumb-item ativo">Downloads de Arquivos</li>
+              </ul>
+            </nav>
+          </div>
           <form action="" enctype="multipart/form-data">
             <div class="item-cadastro">
               <h2>Downloads de Arquivos</h2>
@@ -123,8 +124,8 @@
           </div>
 
 
-          <table class="table table-downloads">
-            <tr>
+          <table class="table table-downloads" data-anime="bottom">
+            <tr data-anime="bottom">
               <th>Nome do Arquivo</th>
               <!-- Usúario que realizou o upload do arquivo -->
               <th>Usuário</th>

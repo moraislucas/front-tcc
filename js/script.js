@@ -444,7 +444,7 @@ function initDashboard() {
         const nomeUsuario = document.querySelector('#NomeUsuarioLogado');
         if (nomeTopo && nomeUsuario)
             nomeTopo.innerHTML = `Olá, ${nomeUsuario.innerText.split(' ')[0]} 🙂`;
-    });
+    },1000);
 
 
     dataPorExtenso();

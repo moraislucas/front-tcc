@@ -222,12 +222,44 @@ p {
 [data-anime] {
   opacity: 0;
   transition: .7s ease;
+  transition-delay: .1s
+}
+
+[data-anime]:nth-child(2) {
   transition-delay: .2s
 }
 
-[data-anime]:nth-child(odd) {
+[data-anime]:nth-child(3) {
+  transition-delay: .3s
+}
+
+[data-anime]:nth-child(4) {
+  transition-delay: .4s
+}
+
+[data-anime]:nth-child(5) {
   transition-delay: .5s
 }
+
+[data-anime]:nth-child(6) {
+  transition-delay: .6s
+}
+
+[data-anime]:nth-child(7) {
+  transition-delay: .7s
+}
+
+[data-anime]:nth-child(8) {
+  transition-delay: .8s
+}
+
+[data-anime]:nth-child(9) {
+  transition-delay: .9s
+}
+
+/* [data-anime]:nth-child(odd) {
+  transition-delay: .5s
+} */
 
 [data-anime=left] {
   transform: translate3d(-50px, 0, 0)
