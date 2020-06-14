@@ -1102,12 +1102,22 @@ svg {
   color: var(--azul-principal)
 }
 
-.total-prazos .resumo-item .mais-prazos svg {
-  color: #bbb
+.mais-prazos {
+  display: flex;
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  margin-top: 20px
 }
 
-.total-prazos .resumo-item .mais-prazos svg:hover {
-  color: var(--azul-principal)
+.mais-prazos:hover {
+  text-decoration: underline
+}
+
+.mais-prazos svg {
+  margin-left: 6.5px;
+  animation: arrowAnime .5s alternate infinite;
+  opacity: 1
 }
 
 .data-hoje {
