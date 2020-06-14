@@ -32,6 +32,10 @@ label {
   color: #000 !important
 }
 
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none
+}
+
 .titulo-h3:after {
   content: '';
   width: 100%;
@@ -550,7 +554,8 @@ select:focus {
   margin-bottom: 10px;
   font-size: .875rem;
   display: flex;
-  align-items: center
+  align-items: center;
+  color: black;
 }
 
 .regra-senha li span::before {

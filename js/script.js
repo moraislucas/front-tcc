@@ -252,6 +252,47 @@ function initNovoEndereco() {
 
 initNovoEndereco();
 
+function validaCPF(strCPF) {
+    let Soma = 0;
+    let Resto;
+    if (strCPF == "00000000000" ||
+        strCPF == "11111111111" ||
+        strCPF == "22222222222" ||
+        strCPF == "33333333333" ||
+        strCPF == "44444444444" ||
+        strCPF == "55555555555" ||
+        strCPF == "66666666666" ||
+        strCPF == "77777777777" ||
+        strCPF == "88888888888" ||
+        strCPF == "99999999999") {
+        return false;
+    }
+
+    for (let i = 1; i <= 9; i++) {
+        Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);
+    }
+    Resto = (Soma * 10) % 11;
+    if ((Resto == 10) || (Resto == 11)) {
+        Resto = 0;
+    }
+    if (Resto != parseInt(strCPF.substring(9, 10))) {
+        return false;
+    }
+    Soma = 0;
+    for (let i = 1; i <= 10; i++) {
+        Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (12 - i);
+    }
+    Resto = (Soma * 10) % 11;
+
+    if ((Resto == 10) || (Resto == 11)) {
+        Resto = 0;
+    }
+    if (Resto != parseInt(strCPF.substring(10, 11))) {
+        return false;
+    }
+    return true;
+}
+
 
 function initMascara() {
     const cpf = document.querySelector('[data-cpf]');
@@ -259,15 +300,24 @@ function initMascara() {
         cpf.addEventListener('change', handleCPF);
 
         function handleCPF(event) {
-            const cpfAjustado = event.target.value.replace(/\D/g, '').replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, '$1.$2.$3-$4');
-            event.target.value = cpfAjustado;
+            if (validaCPF(event.target.value)) {
+                const cpfAjustado = event.target.value.replace(/\D/g, '').replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, '$1.$2.$3-$4');
+                event.target.value = cpfAjustado;
+                cpf.classList.remove('focus-erro');
+                cpf.setCustomValidity('')
+            } else {
+                const div = document.createElement('div');
+                div.classList.add('modal-erro');
+                div.innerHTML = '<h3>CPF inválido, verifique</h3>';
+                document.body.appendChild(div);
+                cpf.classList.add('focus-erro');
+                cpf.focus();
+                cpf.setCustomValidity('CPF inválido, verifique');
+            }
         }
     }
 }
-
 initMascara();
-
-
 function initDataCalendario() {
 
     const inputDate = document.querySelector('.validaData') || document.querySelector('.data-lembrete');
@@ -363,61 +413,6 @@ function initUploadArquivos() {
 
 initUploadArquivos();
 
-
-// Função de NoRefresh. Precisa ser testado com o Paulo
-// Pois pode ter conflitos de css
-
-// function initFetchPage() {
-//     const links = document.querySelectorAll('a');
-
-//     if (links.length) {
-//         function handleClick(event) {
-//             event.preventDefault();
-//             fetchPage(event.target.href);
-//             window.history.pushState(null, null, event.target.href);
-//         }
-//         async function fetchPage(url) {
-//             document.querySelector('.dashboard').innerHTML = `
-//             <div class="loading">
-//                 <span></span>
-//                 <span></span>
-//                 <span></span>
-//                 <span></span>
-//             </div>
-//             `
-//             const pageResponse = await fetch(url);
-//             const pageText = await pageResponse.text();
-//             replaceContent(pageText, url);
-//         }
-
-//         function replaceContent(newText, url) {
-//             const newHtml = document.createElement('div');
-//             newHtml.innerHTML = newText;
-//             const conteudoAntigo = document.querySelector('.dashboard');
-//             const conteudoNovo = newHtml.querySelector('.dashboard');
-//             conteudoAntigo.innerHTML = conteudoNovo.innerHTML;
-//             document.title = newHtml.querySelector('title').innerText;
-
-//             if (url.indexOf('painel-novo') > -1) {
-//                 window.location.reload();
-//             }
-//             addAnimate();
-//         }
-
-//         window.addEventListener('popstate', () => {
-//             fetchPage(window.location.href);
-//         });
-
-//         links.forEach((link) => {
-//             link.addEventListener('click', handleClick);
-//         });
-//     }
-
-// }
-
-// initFetchPage();
-
-
 // Função de identificar o Menor
 
 function initMenor() {
@@ -444,7 +439,7 @@ function initDashboard() {
         const nomeUsuario = document.querySelector('#NomeUsuarioLogado');
         if (nomeTopo && nomeUsuario)
             nomeTopo.innerHTML = `Olá, ${nomeUsuario.innerText.split(' ')[0]} 🙂`;
-    },1000);
+    }, 1000);
 
 
     dataPorExtenso();
@@ -591,8 +586,7 @@ function initDashboard() {
     }
 
     // Caminho da API
-    // fetchDashboard('https://appjuridico.club/Dashboard/Consulta');
-    fetchDashboard('./prazos.json');
+    fetchDashboard('https://appjuridico.club/Dashboard/Consulta');
 
 }
 initDashboard();
